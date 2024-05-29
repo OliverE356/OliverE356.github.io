@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preklik</title>
+    <link rel="stylesheet" href="preklik.css">
+</head>
+<body>
+    <h1>preklik</h1>
+    <a href="index.html"><h1>index</h1></a>
+    <h1 id="cas"></h1>
+</body>
+<script>
+    const casElement = document.getElementById("cas");
+
+    function updateCas(){
+        const teraz = new Date();
+        const formatovanyCas = teraz.toLocaleTimeString();
+        casElement.textContent = formatovanyCas;
+    }
+
+    updateCas();
+    setInterval(updateCas, 1000);
+</script>
+</html>
